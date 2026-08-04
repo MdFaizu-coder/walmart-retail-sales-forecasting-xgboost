@@ -1,4 +1,5 @@
 # 📈 Retail Sales Forecasting using XGBoost
+
 ![Project Banner](./images/model_comparison_r2_score.png)
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python)
@@ -11,16 +12,17 @@
 
 # 📌 Project Overview
 
-Retail sales forecasting helps businesses predict future sales, optimize inventory, improve demand planning, and make data-driven decisions.
+Retail sales forecasting enables businesses to estimate future sales, optimize inventory management, improve demand planning, and support data-driven business decisions.
 
-This project builds and evaluates multiple machine learning models to predict Walmart's weekly sales using historical sales and economic indicators. After comparing different algorithms, **XGBoost** achieved the highest prediction performance and was selected as the final model.
+This project develops and compares multiple machine learning regression models to predict Walmart's weekly sales using historical sales records and economic indicators. Among all the evaluated models, **XGBoost** achieved the best performance and was selected as the final prediction model.
 
 ---
 
 # 🎯 Objectives
 
-- Predict weekly retail sales
-- Analyze factors affecting sales
+- Predict Walmart weekly sales accurately
+- Analyze factors influencing sales
+- Perform Exploratory Data Analysis (EDA)
 - Compare multiple machine learning models
 - Identify the best-performing model
 - Interpret feature importance
@@ -29,22 +31,22 @@ This project builds and evaluates multiple machine learning models to predict Wa
 
 # 📂 Dataset
 
-The dataset contains historical Walmart sales records with the following features:
+The dataset contains historical Walmart weekly sales records with the following features.
 
 | Feature | Description |
 |----------|-------------|
 | Store | Store Number |
-| Date | Weekly Date |
+| Date | Weekly Sales Date |
 | Weekly_Sales | Target Variable |
 | Holiday_Flag | Holiday Indicator |
-| Temperature | Weekly Temperature |
+| Temperature | Average Temperature |
 | Fuel_Price | Fuel Price |
 | CPI | Consumer Price Index |
 | Unemployment | Unemployment Rate |
 
 ---
 
-# 🛠️ Technologies Used
+# 🛠 Technologies Used
 
 - Python
 - Pandas
@@ -60,7 +62,7 @@ The dataset contains historical Walmart sales records with the following feature
 
 # 📊 Exploratory Data Analysis
 
-Several visualizations were created to understand sales patterns and feature relationships.
+Several visualizations were created to understand sales patterns, trends, and relationships among different variables.
 
 ## Weekly Sales Distribution
 
@@ -86,6 +88,30 @@ Several visualizations were created to understand sales patterns and feature rel
 
 ---
 
+## Top 10 Stores by Average Weekly Sales
+
+![](images/top_10_stores_average_weekly_sales.png)
+
+---
+
+## Bottom 10 Stores by Average Weekly Sales
+
+![](images/bottom_10_stores_average_weekly_sales.png)
+
+---
+
+## Temperature vs Weekly Sales
+
+![](images/temperature_vs_weekly_sales.png)
+
+---
+
+## Fuel Price vs Weekly Sales
+
+![](images/fuel_price_vs_weekly_sales.png)
+
+---
+
 # 🤖 Machine Learning Models
 
 The following regression models were trained and evaluated:
@@ -95,13 +121,7 @@ The following regression models were trained and evaluated:
 - Random Forest Regressor
 - XGBoost Regressor
 
----
-
-# 📈 Model Comparison
-
-![](images/model_comparison_r2_score.png)
-
-After comparing all models, **XGBoost** produced the highest R² Score and was selected as the final forecasting model.
+After comparing all models, **XGBoost achieved the highest R² Score and delivered the best prediction performance**, making it the final model for this project.
 
 ---
 
@@ -109,14 +129,21 @@ After comparing all models, **XGBoost** produced the highest R² Score and was s
 
 ![](images/xgboost_feature_importance.png)
 
-The model indicates that **Store**, **Unemployment**, and **CPI** were among the most influential features affecting weekly sales predictions.
+The trained XGBoost model identified the following features as the most influential:
+
+- Store
+- Unemployment
+- CPI
+- Week
+
+These variables contributed the most toward predicting weekly retail sales.
 
 ---
 
 # 📁 Project Structure
 
-```
-retail-sales-forecasting-xgboost/
+```text
+walmart-retail-sales-forecasting-xgboost/
 │
 ├── data/
 │   └── Walmart.csv
@@ -129,8 +156,8 @@ retail-sales-forecasting-xgboost/
 │
 ├── images/
 │
-├── requirements.txt
 ├── README.md
+├── requirements.txt
 ├── LICENSE
 └── .gitignore
 ```
@@ -142,10 +169,16 @@ retail-sales-forecasting-xgboost/
 Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/retail-sales-forecasting-xgboost.git
+git clone https://github.com/MdFaizu-coder/walmart-retail-sales-forecasting-xgboost.git
 ```
 
-Install dependencies
+Move into the project directory
+
+```bash
+cd walmart-retail-sales-forecasting-xgboost
+```
+
+Install the required packages
 
 ```bash
 pip install -r requirements.txt
@@ -162,20 +195,47 @@ jupyter notebook
 # 🚀 How to Run
 
 1. Clone the repository.
-2. Install the required libraries.
-3. Open the notebook.
-4. Run all cells.
-5. View the generated predictions and visualizations.
+2. Install all required dependencies.
+3. Open the notebook:
+
+```text
+notebook/walmart_sales_forecasting.ipynb
+```
+
+4. Run all notebook cells sequentially.
+5. The notebook will:
+   - Perform data preprocessing
+   - Conduct Exploratory Data Analysis (EDA)
+   - Train multiple machine learning models
+   - Compare model performance
+   - Display feature importance
+   - Save the trained XGBoost model
+
+---
+
+# 📈 Model Performance
+
+The machine learning models were evaluated using the **R² Score**.
+
+| Model | Performance |
+|--------|-------------|
+| XGBoost | ⭐ Best |
+| Random Forest | Excellent |
+| Decision Tree | Good |
+| Linear Regression | Lowest |
+
+The comparison showed that **XGBoost significantly outperformed the other regression models**, making it the most suitable model for predicting Walmart's weekly sales.
 
 ---
 
 # 📌 Future Improvements
 
-- Hyperparameter Optimization
-- Cross Validation
-- Time-Series Forecasting Models
-- Deployment using Streamlit
-- Real-time Sales Prediction API
+- Hyperparameter tuning using GridSearchCV
+- Time-series forecasting using Prophet or LSTM
+- Streamlit web application
+- FastAPI deployment
+- Real-time sales prediction dashboard
+- Automated model retraining pipeline
 
 ---
 
@@ -185,6 +245,21 @@ jupyter notebook
 
 AI & Data Science Student
 
+GitHub:
+https://github.com/MdFaizu-coder
+
 ---
 
-## ⭐ If you found this project helpful, consider giving it a star!
+# 📜 License
+
+This project is licensed under the **MIT License**.
+
+See the **LICENSE** file for more information.
+
+---
+
+# ⭐ Support
+
+If you found this project useful, consider giving it a ⭐ on GitHub.
+
+It helps others discover the project and motivates future improvements.
