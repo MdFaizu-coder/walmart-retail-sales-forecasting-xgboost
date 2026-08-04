@@ -299,7 +299,8 @@ AI & Data Science Student
 ### Connect with me
 
 - **GitHub:** https://github.com/MdFaizu-coder
-- **LinkedIn:** *(Add your LinkedIn profile URL here after you create/update it.)*
+- **LinkedIn:** *(
+linkedin.com/in/mohammed-faizuddin-36815730b)*
 
 ---
 
