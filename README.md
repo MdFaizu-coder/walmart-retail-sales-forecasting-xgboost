@@ -298,9 +298,9 @@ AI & Data Science Student
 
 ### Connect with me
 
-- **GitHub:** https://github.com/MdFaizu-coder
-- **LinkedIn:** *(
-linkedin.com/in/mohammed-faizuddin-36815730b)*
+[![GitHub](https://img.shields.io/badge/GitHub-MdFaizu--coder-181717?style=for-the-badge&logo=github)](https://github.com/MdFaizu-coder)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Mohammed%20Faizuddin-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/mohammed-faizuddin-36815730b/)
 
 ---
 
