@@ -1,4 +1,5 @@
 # 📈 Retail Sales Forecasting using XGBoost
+![Project Banner](./images/model_comparison_r2_score.png)
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python)
 ![XGBoost](https://img.shields.io/badge/XGBoost-Machine%20Learning-green?style=for-the-badge)
